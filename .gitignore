@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+# clnagd
+.clangd
+
+# ROS2
+build/
+install/
+log/
+.cache/
