@@ -12,6 +12,7 @@ class ImageSubscriber : public rclcpp::Node {
 public:
   ImageSubscriber(const std::string node_name, const std::string topic_name)
       : rclcpp::Node(node_name, topic_name) {
+    RCLCPP_INFO(this->get_logger(), "ImageSubscriber node initialize");
     sub_ = this->create_subscription<sensor_msgs::msg::Image>(
         topic_name, SensorQoS(),
         std::bind(&ImageSubscriber::Callback, this, std::placeholders::_1));

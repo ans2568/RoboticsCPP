@@ -10,9 +10,9 @@
 class Detector {
 public:
   Detector(const std::string class_file_path,
-           const std::string config_file_path, const std::string weights_path)
+           const std::string config_file_path, const std::string weights_path, const float confidence_threshold, const float nms_threshold)
       : class_file_(class_file_path), config_file_(config_file_path),
-        weights_file_(weights_path) {}
+        weights_file_(weights_path), confidence_th_(confidence_threshold), nms_th_(nms_threshold) {}
 
 // TODO description all of them
   bool Init();
@@ -38,9 +38,8 @@ private:
   cv::dnn::Net net_;
   cv::Mat blob_;
 
-  // TODO threshold parameter using config file or start entry point(main)
-  double confidence_th_ = 0.7;
-  double nms_th_ = 0.4;
+  float confidence_th_ = 0.7;
+  float nms_th_ = 0.6;
 };
 
 #endif

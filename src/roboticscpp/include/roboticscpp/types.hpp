@@ -8,6 +8,9 @@
 #include <memory>
 #include <vector>
 
+// yaml-cpp
+#include <yaml-cpp/yaml.h>
+
 // ROS2
 #include "rclcpp/rclcpp.hpp"
 typedef rclcpp::SensorDataQoS SensorQoS;

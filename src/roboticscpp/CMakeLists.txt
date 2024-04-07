@@ -36,6 +36,10 @@ find_package(image_transport REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
+# yaml-cpp
+find_package(yaml-cpp REQUIRED)
+include_directories(${YAML_CPP_INCLUDE_DIR})
+
 # OpenCV
 find_package(OpenCV 4 REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
@@ -69,7 +73,7 @@ add_subdirectory(${${PACKAGE_NAME}_SOURCE_PATH})
 
 add_executable(MAIN src/main.cpp)
 ament_target_dependencies(MAIN rclcpp std_msgs sensor_msgs cv_bridge image_transport OpenCV Eigen3 Sophus)
-target_link_libraries(MAIN LIBS)
+target_link_libraries(MAIN LIBS ${YAML_CPP_LIBRARIES})
 
 install(TARGETS
   MAIN
