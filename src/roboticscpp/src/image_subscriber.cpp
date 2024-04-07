@@ -15,5 +15,6 @@ void ImageSubscriber::Callback(
     cv_ptr_ = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
     detector_->Detect(cv_ptr_->image);
     cv::imshow("Detected", cv_ptr_->image);
+    cv::waitKey(1);
   }
 }
