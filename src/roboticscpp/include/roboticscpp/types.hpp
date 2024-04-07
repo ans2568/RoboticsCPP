@@ -2,10 +2,11 @@
 #ifndef _TYPES_HPP
 #define _TYPES_HPP
 
-#include <iostream>
 #include <chrono>
-#include <string>
+#include <fstream>
+#include <iostream>
 #include <memory>
+#include <string>
 #include <vector>
 
 // yaml-cpp

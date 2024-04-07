@@ -1,0 +1,10 @@
+%YAML:1.0
+
+coco_names: /RoboticsCPP/src/roboticscpp/config/coco.names
+model_config: /RoboticsCPP/src/roboticscpp/config/yolov3.cfg
+weights: /RoboticsCPP/src/roboticscpp/config/yolov3.weights
+
+nms_th: 0.6
+confidence_th: 0.7
+
+image_topic: /camera/image_raw

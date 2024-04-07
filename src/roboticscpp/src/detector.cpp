@@ -1,5 +1,4 @@
 #include "roboticscpp/detector.hpp"
-#include <fstream>
 
 // TODO LOGGING method
 bool Detector::Init() {
